@@ -2,10 +2,38 @@
 
 <div class="row">
     <% @products.each do |p| %>
-        <div class="col-md-3">
+    <div class="col-md-3">
+        <div>
             <%= p.title %>
         </div>
+
+        <div>
+            <img src= "<%= p.path_to_image %>" length="100" width="100" />
+        </div>
+
+        <div>
+            <%= p.description %>
+        </div>
+
+        <div>
+            <%= p.price %>
+        </div>
+
+        <div>
+            <%= p.is_spicy%>
+        </div>
+        
+        <div>
+            <%= p.is_veg%>
+        </div>
+
+        <div>
+            <%= p.is_best_offer%>
+        </div>
+    </div>
     <% end %>
 </div>
+<br />
+<br />
 <button class= "btn btn-primary" onclick="something()">Click me!</button>
 
